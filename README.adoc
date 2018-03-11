@@ -1,0 +1,10 @@
+= River Batch Sample
+
+A Boot Batch applicaition that has a Batch job with 2 steps:
+
+. First Step reads a sample file containing a pipe delimited file sing FlatFileItemReader and inserts the data into a relational table using JDBCWriter
+. Second Step Reads data from the relational table  with a chunk size of 5 and a custom writer that writes the max river height to the console for each chunk.
+
+== Build
+
+mvn clean install
